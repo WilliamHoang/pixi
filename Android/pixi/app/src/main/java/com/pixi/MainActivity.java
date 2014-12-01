@@ -1,9 +1,25 @@
 package com.pixi;
 
+
 import android.app.Activity;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+//import android.util.Log;
+
+import com.couchbase.lite.*;
+import com.couchbase.lite.android.AndroidContext;
+import com.couchbase.lite.util.Log;
+
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.HashMap;
+import java.util.Map;
+
+
 
 
 public class MainActivity extends Activity {
@@ -12,6 +28,10 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final String TAG = "HelloWorld";
+        Log.d(TAG, "Beginning of: Pixi App");
+        Log.d(TAG, "End of:  Pixi App");
     }
 
 
@@ -36,4 +56,6 @@ public class MainActivity extends Activity {
 
         return super.onOptionsItemSelected(item);
     }
+
+
 }
